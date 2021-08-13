@@ -36,3 +36,11 @@ body{
   color: #C3CADB;
   border-radius: 50px;
 }
+
+.btn-upload{
+  font-size: 2.7rem;
+  font-weight: 500;
+  color: #DC3545;
+  border-radius: 50px;
+  padding: 3%;
+}
