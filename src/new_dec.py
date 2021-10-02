@@ -14,14 +14,14 @@ Qt = QtCore.Qt
 
 def dec():
     myKey = "1234"
-    file  = "D:\\Project\\ISAA Project\\Information-Security-Project\\src\\encrypted.txt"
+    file  = "./src/encrypted.txt"
     text=open(file).read()
     cipher= text.encode('utf-8')
     x = Decrypter(cipher)
     image=x.decrypt_image(myKey)
     print(type(image))
     imag = Img.open(io.BytesIO(image))
-    imag.save('D:\\Project\\ISAA Project\\Information-Security-Project\\src\\decryptedimage.png')
+    imag.save('./src/decryptedimage.png')
 
     # ba = QtCore.QByteArray(image)
     # print(ba)

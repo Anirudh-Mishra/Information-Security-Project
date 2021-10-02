@@ -11,7 +11,7 @@ import sys
 Qt = QtCore.Qt
 
 def enc():
-    with open("D:\\Project\\ISAA Project\\Information-Security-Project\\src\\image.jpg", "rb") as imageFile:
+    with open("./src/image.jpg", "rb") as imageFile:
         value = base64.b64encode(imageFile.read())
         #print(str)
     myKey = "1234"
@@ -24,6 +24,6 @@ def enc():
     # value = base64.b64encode(pixmap_bytes)
     x = Encrypter(value, myKey)
     cipher = x.encrypt_image()
-    fh = open("D:\\Project\\ISAA Project\\Information-Security-Project\\src\\cipher.txt", "wb")
+    fh = open("./src/cipher.txt", "wb")
     fh.write(cipher)
     fh.close()
