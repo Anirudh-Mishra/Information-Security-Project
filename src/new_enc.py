@@ -10,20 +10,20 @@ import os
 import sys
 Qt = QtCore.Qt
 
-
-with open("banner.jpeg", "rb") as imageFile:
-    value = base64.b64encode(imageFile.read())
-    #print(str)
-myKey = "1234"
-# ba = QtCore.QByteArray()
-# buff = QtCore.QBuffer(ba)
-# buff.open(QtCore.QIODevice.WriteOnly) 
-# #ok = pixmap.save(buff, "PNG")
-# #assert ok
-# pixmap_bytes = ba.data()
-# value = base64.b64encode(pixmap_bytes)
-x = Encrypter(value, myKey)
-cipher = x.encrypt_image()
-fh = open("cipher.txt", "wb")
-fh.write(cipher)
-fh.close()
+def enc():
+    with open("D:\\Project\\ISAA Project\\Information-Security-Project\\src\\image.jpg", "rb") as imageFile:
+        value = base64.b64encode(imageFile.read())
+        #print(str)
+    myKey = "1234"
+    # ba = QtCore.QByteArray()
+    # buff = QtCore.QBuffer(ba)
+    # buff.open(QtCore.QIODevice.WriteOnly) 
+    # #ok = pixmap.save(buff, "PNG")
+    # #assert ok
+    # pixmap_bytes = ba.data()
+    # value = base64.b64encode(pixmap_bytes)
+    x = Encrypter(value, myKey)
+    cipher = x.encrypt_image()
+    fh = open("D:\\Project\\ISAA Project\\Information-Security-Project\\src\\cipher.txt", "wb")
+    fh.write(cipher)
+    fh.close()

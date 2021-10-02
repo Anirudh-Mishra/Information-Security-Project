@@ -18,7 +18,10 @@
     <div class="container">
         <section style="margin-left:3rem; height: 70vh; margin-top: 10rem;">
             <div style="text-align: center">
-                <input type="file" id="file-uploader" class="btn btn-outline-danger btn-upload"></input>
+                <form method="POST" action="/uploadenc/" enctype="multipart/form-data">
+                    <input type="file" name="file" id="file-uploader" class="btn btn-outline-danger btn-upload"></input>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
             <p style="text-align:center; font-weight:500; color: aliceblue; font-size: 2rem;" id="feedback"></p>
         </section>
