@@ -1,6 +1,6 @@
 import base64
 import hashlib
-from AESCipher import AESCipher
+from src.AESCipher import AESCipher
 from PIL import Image
 from random import randint
 class Encrypter:
