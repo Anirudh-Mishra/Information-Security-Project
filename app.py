@@ -1,17 +1,17 @@
 import os
-import urllib.request
-from flask import Flask, flash, request, redirect, url_for, render_template
-from werkzeug.utils import secure_filename
 import sys
+import urllib.request
 from src.new_enc import enc
 from src.new_dec import dec
+from werkzeug.utils import secure_filename
+from flask import Flask, flash, request, redirect, url_for, render_template
 
 UPLOAD_FOLDER = 'src/'
 
 app = Flask(__name__)
+app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif', 'txt'])
-app.secret_key = "secret key"
 
 def allowed_file(filename):
 	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
