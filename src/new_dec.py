@@ -1,16 +1,12 @@
-from PyQt5 import QtCore,QtGui
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from Encrypter import Encrypter
-from Decrypter import Decrypter
-from PIL import Image as Img
-from PIL import ImageTk as ImgTk
-import base64
-from Crypto.Cipher import AES
 import os
-import sys
 import io
-Qt = QtCore.Qt
+import sys
+import base64
+from PIL import Image as Img
+from Crypto.Cipher import AES
+from PIL import ImageTk as ImgTk
+from src.Encrypter import Encrypter
+from src.Decrypter import Decrypter
 
 def dec():
     myKey = "1234"
@@ -22,6 +18,3 @@ def dec():
     print(type(image))
     imag = Img.open(io.BytesIO(image))
     imag.save('./src/decryptedimage.png')
-
-    # ba = QtCore.QByteArray(image)
-    # print(ba)
