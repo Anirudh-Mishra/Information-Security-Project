@@ -1,7 +1,7 @@
 from PyQt5 import QtCore
 from PyQt5.QtCore import *
-from Encrypter import Encrypter
-from Decrypter import Decrypter
+from src.Encrypter import Encrypter
+from src.Decrypter import Decrypter
 from PIL import Image as Img
 from PIL import ImageTk as ImgTk
 import base64

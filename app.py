@@ -4,8 +4,8 @@ from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import sys
 sys.path.insert(0, '.\src')
-from new_enc import enc
-from new_dec import dec
+from src.new_enc import enc
+from src.new_dec import dec
 
 UPLOAD_FOLDER = 'src/'
 
